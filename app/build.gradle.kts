@@ -16,6 +16,9 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        val apiKey = findProperty("api_key") as String?
+        buildConfigField("String", "api_key", "\"${apiKey ?: ""}\"")
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -40,6 +43,7 @@ android {
         jvmTarget = "17"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
     composeOptions {

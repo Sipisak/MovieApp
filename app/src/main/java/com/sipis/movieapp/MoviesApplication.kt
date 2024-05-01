@@ -4,9 +4,9 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
-class MoviesApplication {
-    @HiltAndroidApp
-    class MoviesApplication : Application() {
+
+@HiltAndroidApp
+class MoviesApplication : Application() {
         override fun onCreate() {
             super.onCreate()
 
@@ -14,4 +14,3 @@ class MoviesApplication {
         }
 
     }
-}
